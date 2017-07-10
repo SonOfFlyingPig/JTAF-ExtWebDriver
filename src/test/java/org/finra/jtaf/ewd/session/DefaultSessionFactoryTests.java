@@ -43,30 +43,30 @@ public class DefaultSessionFactoryTests {
 	public void createCapabilitiesTest() throws Exception {
 		//THESE USE GRID
 		//browser=ie
-		Assert.assertEquals("internet explorer", capabilityTest("ie").getBrowserName());
+		Assert.assertEquals("internet explorer", capabilityTest("ie").getCapability("browserName"));
 		//browser=iexplore, also proxy
 		DesiredCapabilities ie2 = capabilityTest("ie2");
-		Assert.assertEquals("internet explorer", ie2.getBrowserName());
+		Assert.assertEquals("internet explorer", ie2.getCapability("browserName"));
 		Assert.assertNotNull(ie2.getCapability(CapabilityType.PROXY));
 
 		//browser=*iexplore
-		Assert.assertEquals("internet explorer", capabilityTest("ie3").getBrowserName());
+		Assert.assertEquals("internet explorer", capabilityTest("ie3").getCapability("browserName"));
 		//browser=firefox
-		Assert.assertEquals("firefox", capabilityTest("firefox").getBrowserName());
+		Assert.assertEquals("firefox", capabilityTest("firefox").getCapability("browserName"));
 		//browser=*firefox
-		Assert.assertEquals("firefox", capabilityTest("firefox2").getBrowserName());
+		Assert.assertEquals("firefox", capabilityTest("firefox2").getCapability("browserName"));
 		//browser=chrome
-		Assert.assertEquals("chrome", capabilityTest("chrome").getBrowserName());
+		Assert.assertEquals("chrome", capabilityTest("chrome").getCapability("browserName"));
 		//browser=safari
-		Assert.assertEquals("safari", capabilityTest("safari").getBrowserName());
+		Assert.assertEquals("safari", capabilityTest("safari").getCapability("browserName"));
 		//browser=opera
-		Assert.assertEquals("opera", capabilityTest("opera").getBrowserName());
+		Assert.assertEquals("opera", capabilityTest("opera").getCapability("browserName"));
 		//browser=iphone
-		Assert.assertEquals("iPhone",capabilityTest("iphone").getBrowserName());
+		Assert.assertEquals("iPhone",capabilityTest("iphone").getCapability("browserName"));
 		//browser=ipad
-		Assert.assertEquals("iPad", capabilityTest("ipad").getBrowserName());
+		Assert.assertEquals("iPad", capabilityTest("ipad").getCapability("browserName"));
 		//browser=android
-		Assert.assertEquals("android", capabilityTest("android").getBrowserName());
+		Assert.assertEquals("android", capabilityTest("android").getCapability("browserName"));
 
 		//THESE DO NOT USE GRID
 		DesiredCapabilities nonChrome = capabilityTest("safari2");

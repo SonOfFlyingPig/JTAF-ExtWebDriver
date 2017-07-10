@@ -661,7 +661,7 @@ public class DefaultExtWebDriver implements ExtWebDriver, HighlightProvider {
 			Capabilities capabilities = ((HasCapabilities) wd)
 					.getCapabilities();
 			if (capabilities != null) {
-				return capabilities.getBrowserName();
+				return (String) capabilities.getCapability("browserName");
 			}
 			return null;
 		}
